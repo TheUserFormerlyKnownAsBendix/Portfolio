@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Portfolio</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_info">Info</string>
+    <string name="action_start_app">The app would launch now if it was installed.</string>
+    <string name="preferences">preferences</string>
+    <string name="title_activity_info">Info</string>
+    <string name="credits">Created by <a href="https://github.com/TheUserFormerlyKnownAsBendix">Max Theisen</a> for the Android Developer Nanodegree</string>
 </resources>

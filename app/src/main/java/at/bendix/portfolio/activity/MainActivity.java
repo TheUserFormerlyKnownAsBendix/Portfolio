@@ -1,7 +1,10 @@
-package at.bendix.portfolio;
+package at.bendix.portfolio.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +17,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import at.bendix.portfolio.R;
 import at.bendix.portfolio.adapter.AppAdapter;
 import at.bendix.portfolio.data.App;
 import at.bendix.portfolio.network.Fetcher;
@@ -63,7 +67,9 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_info) {
+            startActivity(new Intent(this, InfoActivity.class));
+            overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
             return true;
         }
 
@@ -72,7 +78,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void startIntent(String name) {
         if(!isAppInstalled(name)) {
-            Toast.makeText(this, "The app would start now if it was installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.action_start_app), Toast.LENGTH_SHORT).show();
         } else {
             try {
                 Intent i = getPackageManager().getLaunchIntentForPackage(name);

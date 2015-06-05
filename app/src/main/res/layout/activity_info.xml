@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="at.bendix.portfolio.activity.InfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:theme="@style/Toolbar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/activity_info_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/credits"/>
+
+</LinearLayout>
