@@ -51,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
         }, new OnErrorCallback() {
             @Override
             public void onError(Exception e) {
-
+                Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
